@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz - Canicules Urbaines</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .quiz-container {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      max-width: 700px;
+      margin: auto;
+      text-align: left;
+    }
+    .question {
+      margin-bottom: 2rem;
+    }
+    .question h3 {
+      margin-bottom: 0.5rem;
+      color: #F08334;
+    }
+    .answers label {
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+    #result {
+      margin-top: 2rem;
+      font-weight: bold;
+      color: #F08334;
+    }
+    button {
+      padding: 0.5rem 1rem;
+      background-color: #F08334;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #F08334;
+    }
+    footer {
+      background-color: #FF6040;
+      color: #fff;
+      text-align: center;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🎯 Quiz - Agir face aux canicules</h1>
+  </header>
+  <nav>
+    <a href="index.html">← Retour à l'accueil</a>
+  </nav>
+
+  <main class="container">
+    <div class="quiz-container" id="quiz">
+      <div class="question" data-correct="b" title="📝 Les ICU sont des zones en ville où la chaleur s’accumule plus qu’en périphérie rurale.">
+        <h3>1. Qu’est-ce qu’un îlot de chaleur urbain (ICU) ?</h3>
+        <div class="answers">
+          <label><input type="radio" name="q1" value="a"> Une zone sans circulation automobile</label>
+          <label><input type="radio" name="q1" value="b"> Une zone urbaine où la température est plus élevée qu’en zone rurale</label>
+          <label><input type="radio" name="q1" value="c"> Un quartier fortement végétalisé</label>
+        </div>
+      </div>
+
+      <div class="question" data-correct="b" title="📝 Le béton, l’asphalte et autres matériaux foncés emmagasinent la chaleur.">
+        <h3>2. Quelle est l'une des principales causes des ICU ?</h3>
+        <div class="answers">
+          <label><input type="radio" name="q2" value="a"> Les façades colorées</label>
+          <label><input type="radio" name="q2" value="b"> L’utilisation de matériaux absorbant la chaleur comme le béton</label>
+          <label><input type="radio" name="q2" value="c"> La pluie urbaine</label>
+        </div>
+      </div>
+
+      <div class="question" data-correct="c" title="📝 Les vagues de chaleur ont causé plus de 47 000 décès, dont 5 000 en France.">
+        <h3>3. Quel a été l’impact sanitaire des canicules en Europe en 2023 ?</h3>
+        <div class="answers">
+          <label><input type="radio" name="q3" value="a"> 10 000 morts</label>
+          <label><input type="radio" name="q3" value="b"> 25 000 morts</label>
+          <label><input type="radio" name="q3" value="c"> Plus de 47 000 morts</label>
+        </div>
+      </div>
+
+      <div class="question" data-correct="b" title="📝 85 % des victimes des canicules ont plus de 75 ans.">
+        <h3>4. Quelle tranche d’âge est la plus touchée par les canicules ?</h3>
+        <div class="answers">
+          <label><input type="radio" name="q4" value="a"> Les enfants de moins de 10 ans</label>
+          <label><input type="radio" name="q4" value="b"> Les personnes âgées de plus de 75 ans</label>
+          <label><input type="radio" name="q4" value="c"> Les adultes actifs (25-60 ans)</label>
+        </div>
+      </div>
+
+      <div class="question" data-correct="c" title="📝 Les toitures végétalisées réduisent la température de surface de jusqu’à 25°C.">
+        <h3>5. Quelle solution permet de rafraîchir significativement les toits ?</h3>
+        <div class="answers">
+          <label><input type="radio" name="q5" value="a"> Peindre les toits en rouge</label>
+          <label><input type="radio" name="q5" value="b"> Installer des panneaux solaires</label>
+          <label><input type="radio" name="q5" value="c"> Créer des toitures végétalisées</label>
+        </div>
+      </div>
+
+      <div class="question" data-correct="b" title="📝 Les revêtements foncés comme le bitume stockent énormément de chaleur.">
+        <h3>6. Quel matériau absorbe 90 à 95 % du rayonnement solaire ?</h3>
+        <div class="answers">
+          <label><input type="radio" name="q6" value="a"> Le bois</label>
+          <label><input type="radio" name="q6" value="b"> Le bitume</label>
+          <label><input type="radio" name="q6" value="c"> Le verre</label>
+        </div>
+      </div>
+
+      <div class="question" data-correct="c" title="📝 Un arbre peut libérer jusqu’à 450 litres d’eau par jour, rafraîchissant l’air ambiant.">
+        <h3>7. Quel effet a un arbre mature sur la température ambiante ?</h3>
+        <div class="answers">
+          <label><input type="radio" name="q7" value="a"> Il ne change rien</label>
+          <label><input type="radio" name="q7" value="b"> Il augmente la température</label>
+          <label><input type="radio" name="q7" value="c"> Il peut baisser la température de 1 à 2°C, voire plus</label>
+        </div>
+      </div>
+
+      <div class="question" data-correct="c" title="📝 Les dispositifs aquatiques rafraîchissent les espaces publics.">
+        <h3>8. Quel est l'effet de l’eau (fontaines, brumisateurs...) en ville ?</h3>
+        <div class="answers">
+          <label><input type="radio" name="q8" value="a"> Elle rend l’air plus sec</label>
+          <label><input type="radio" name="q8" value="b"> Elle élève la température</label>
+          <label><input type="radio" name="q8" value="c"> Elle abaisse la température ambiante</label>
+        </div>
+      </div>
+
+      <div class="question" data-correct="b" title="📝 Les sols perméables favorisent l’infiltration de l’eau et le refroidissement naturel.">
+        <h3>9. Quel type de sol permet de mieux gérer la chaleur en ville ?</h3>
+        <div class="answers">
+          <label><input type="radio" name="q9" value="a"> Les sols en béton</label>
+          <label><input type="radio" name="q9" value="b"> Les sols perméables</label>
+          <label><input type="radio" name="q9" value="c"> Les sols goudronnés</label>
+        </div>
+      </div>
+
+      <div class="question" data-correct="c" title="📝 La chaleur entraîne plus de climatisation, donc plus de consommation énergétique.">
+        <h3>10. Comment chaque degré supplémentaire influe-t-il sur la consommation d’électricité ?</h3>
+        <div class="answers">
+          <label><input type="radio" name="q10" value="a"> +1 à 2 %</label>
+          <label><input type="radio" name="q10" value="b"> +5 %</label>
+          <label><input type="radio" name="q10" value="c"> +10 à 15 %</label>
+        </div>
+      </div>
+
+      <button onclick="calculerScore()">Voir mon score</button>
+      <div id="result"></div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 18-04-2025 | Philippine-Adriana-Constance Canicules Urbaines | Quizz interactif</p>
+  </footer>
+
+  <script>
+    function calculerScore() {
+      let score = 0;
+      const questions = document.querySelectorAll('.question');
+  
+      questions.forEach((question, index) => {
+        const correct = question.getAttribute('data-correct');
+        const name = 'q' + (index + 1);
+        const inputs = question.querySelectorAll(`input[name="${name}"]`);
+        const selected = question.querySelector(`input[name="${name}"]:checked`);
+  
+        let isCorrect = false;
+  
+        inputs.forEach(input => {
+          const label = input.parentElement;
+          label.style.backgroundColor = ""; // Reset background
+  
+          if (input.value === correct) {
+            label.style.backgroundColor = "#d4edda"; // vert pour la bonne réponse
+          }
+  
+          if (selected && selected.value === input.value) {
+            if (input.value !== correct) {
+              label.style.backgroundColor = "#f8d7da"; // rouge si mauvaise réponse
+            } else {
+              isCorrect = true;
+            }
+          }
+        });
+  
+        if (isCorrect) {
+          score++;
+        } else {
+          // Affiche la correction uniquement si la réponse est incorrecte
+          let correction = document.createElement('p');
+          correction.style.color = "#F08334";
+          correction.style.fontStyle = "italic";
+          correction.textContent = `💡 Bonne réponse : ${
+            question.querySelector(`input[value="${correct}"]`).parentElement.textContent.trim()
+          }`;
+          question.appendChild(correction);
+        }
+      });
+  
+      const resultDiv = document.getElementById('result');
+      resultDiv.textContent = `✅ Vous avez ${score} bonne(s) réponse(s) sur ${questions.length}.`;
+    }
+  </script>  
+</body>
+</html>

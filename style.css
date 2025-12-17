@@ -1,0 +1,212 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    color: #130e0e;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header {
+    background-color: #FF6040;
+    color: #fff;
+
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+nav {
+    margin-top: 1rem;
+}
+nav a {
+    color: #fff;
+    margin: 0 1rem;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    background-color: #D7321B;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.menu-container {
+    position: absolute;
+    top: 1rem;
+    right: 2rem; /* Ajuste l'espacement à droite */
+    z-index: 101;
+}
+
+.menu-bouton {
+    background: #D7321B;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+
+.menu-bouton:hover {
+    background: #D7321B;
+}
+
+.menu-deroulant {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    min-width: 200px;
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(9, 8, 8, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Affichage du menu au survol du bouton */
+.menu-container:hover .menu-deroulant {
+    display: block;
+    animation: fadeInMenu 0.3s;
+}
+
+/* Animation d'apparition */
+@keyframes fadeInMenu {
+    from { opacity: 0; transform: translateY(-10px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+.menu-deroulant ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-deroulant li {
+    border-bottom: 1px solid #eeeeee;
+}
+
+.menu-deroulant li:last-child {
+    border-bottom: none;
+}
+
+.menu-deroulant a {
+    display: block;
+    color: #3d3c3c;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    transition: background 0.2s;
+}
+
+.menu-deroulant a:hover {
+    background: #f2f2f2; /* Effet hover léger */
+    color: #D7321B;
+}
+nav a:hover {
+    background-color: #D7321B;
+}
+.container {
+    max-width: 100%; /* Permet à la largeur de s'ajuster */
+    width: 100%;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+section {
+    margin-bottom: 2rem;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+}
+h2 {
+    color: #F08334;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+ul li {
+    margin: 0.5rem 0;
+}
+footer {
+    background-color: #FF6040;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    /* Menu sur mobile */
+    .menu-container {
+        position: relative;
+        right: 0;
+        margin-bottom: 1rem; /* Espacement inférieur */
+    }
+
+    /* Réduction du padding du bouton pour petits écrans */
+    .menu-bouton {
+        padding: 0.5rem 1rem;
+        font-size: 1em;
+    }
+
+    .menu-deroulant {
+        min-width: 180px;
+    }
+
+    /* Ajustement des sections et containers */
+    .container {
+        padding: 1rem;
+    }
+
+    section {
+        padding: 1rem;
+    }
+
+    footer {
+        padding: 1rem;
+    }
+
+    /* Empêcher le débordement horizontal */
+    body {
+        overflow-x: hidden;
+    }
+    header {
+        overflow-x: hidden;
+    }
+}
+
+/*page d'acceuil*/
+.explication-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 20px;
+}
+
+.texte-explication {
+  flex: 1;
+  min-width: 250px;
+}
+
+.image-explication {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+}
+
+.image-explication img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+}

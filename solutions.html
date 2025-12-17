@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Solutions pour des villes plus fraîches</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    form {
+      margin-top: 2rem;
+      padding: 1.5rem;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+    }
+    textarea {
+      width: 100%;
+      height: 100px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      resize: vertical;
+    }
+    button[type="submit"] {
+      background-color: #F08334;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button[type="submit"]:hover {
+      background-color: #F08334;
+    }
+    #message-confirmation {
+      margin-top: 1rem;
+      color: #F08334;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🌿1 rue, 1 arbre : et si on commençait ici ?</h1>
+  </header>
+  <nav>
+    <a href="index.html">← Retour à l'accueil</a>
+  </nav>
+  <main class="container">
+    <section>
+      <h2>Objectif</h2>
+      <p>Présenter des solutions concrètes pour atténuer les ICU.</p>
+
+      <h3>🌳 Végétalisation urbaine</h3>
+      <ul>
+        <li><strong>Toitures végétalisées</strong> : Réduction de la température de surface jusqu'à 25°C</li>
+        <li><strong>Murs végétaux</strong> : Isolation thermique réduisant la dépendance à la climatisation</li>
+        <li><strong>Espaces verts</strong> : Favorisent l'évapotranspiration et créent des zones de fraîcheur</li>
+      </ul>
+
+      <h3>💧 Gestion de l'eau</h3>
+      <ul>
+        <li><strong>Sols perméables</strong> : Réduction du ruissellement et amélioration de l'infiltration</li>
+        <li><strong>Présence d'eau</strong> : Fontaines, bassins, brumisateurs pour rafraîchir l'air</li>
+      </ul>
+
+      <h3>🏙️ Urbanisme et architecture</h3>
+      <ul>
+        <li><strong>Matériaux réfléchissants</strong> : Revêtements clairs pour les toits et routes</li>
+        <li><strong>Design urbain</strong> : Favoriser la circulation d'air et l'ombrage naturel</li>
+      </ul>
+    </section>
+
+    <section class="solutions-villes">
+        <h2 style="text-align:center; color: #F08334;">🌍 Exemples de solutions mises en place dans différentes villes</h2>
+        <ul style="list-style: none; padding: 0;">
+          
+          <li style="display: flex; align-items: center; margin: 2rem 0;">
+            <img src="_h93hx4g5cIzaqp0ZbIs0 1.png" style="width: 300px; height: auto; border-radius: 8px; margin-right: 2rem;">
+            <div>
+              <h3>Superblocks de Barcelone</h3>
+              <p>Des quartiers sans voitures où la vie sociale et la verdure remplacent le bitume.</p>
+            </div>
+          </li>
+      
+          <li style="display: flex; align-items: center; flex-direction: row-reverse; margin: 2rem 0;">
+            <img src="Fma-1dAqk75qSdWVi6mtU.png" style="width: 300px; height: auto; border-radius: 8px; margin-left: 2rem;">
+            <div>
+              <h3>Gardens by the Bay, Singapour</h3>
+              <p>Forêt verticale artificielle régulant naturellement sa température.</p>
+            </div>
+          </li>
+      
+          <li style="display: flex; align-items: center; margin: 2rem 0;">
+            <img src="UlfING3FM_qLxovcg89QV 1.png" style="width: 300px; height: auto; border-radius: 8px; margin-right: 2rem;">
+            <div>
+              <h3>Bains du Port, Copenhague</h3>
+              <p>Intégration de l'eau dans l'espace urbain pour rafraîchir la ville.</p>
+            </div>
+          </li>
+      
+        </ul>
+      </section>                  
+
+    <!-- 📝 Formulaire de contribution -->
+    <section>
+      <h2>💡 Proposez votre propre solution !</h2>
+      <p>Vous avez une idée pour rafraîchir la ville ? Partagez-la avec nous :</p>
+      <form id="solution-form">
+        <textarea placeholder="Décrivez votre solution ici..." required></textarea>
+        <button type="submit">Envoyer ma solution</button>
+      </form>
+      <div id="message-confirmation"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 18-04-2025 | Philippine-Adriana-Constance Canicules Urbaines | Solutions </p>
+  </footer>
+
+  <script>
+    const form = document.getElementById('solution-form');
+    const messageDiv = document.getElementById('message-confirmation');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      const textarea = form.querySelector('textarea');
+      const solution = textarea.value.trim();
+
+      if (solution !== "") {
+        messageDiv.textContent = "🙏 Merci pour votre contribution ! Votre idée est précieuse pour rendre nos villes plus vivables.";
+        textarea.value = "";
+      } else {
+        messageDiv.textContent = "⚠️ Veuillez saisir une solution avant d’envoyer.";
+      }
+    });
+  </script>
+</body>
+</html>
